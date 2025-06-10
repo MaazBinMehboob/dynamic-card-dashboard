@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #d8dadd;
+}
+
+.up {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.btn1 {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(58, 55, 55);
+    color: wheat;
+
+}
+
+.btn1:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+    background-color: black;
+}
+
+.cardscontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    border-radius: 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08), 3px 8px 10px rgb(117, 111, 111);
+}
+
+.cards:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+
+.cards h2 {
+    height: 70px;
+    overflow: hidden;
+    margin: 25px 15px 3px;
+}
+
+.cards p {
+    height: 50px;
+    overflow: hidden;
+    margin: 0px 15px 10px;
+}
+
+.select-card {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    accent-color: rgb(90, 156, 60);
+}
+
+.select-card:hover {
+    transform: scale(1.1);
+}
+
+.card-img {
+
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.delete {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+
+}
+
+@media (max-width: 480px) {
+    .up {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn1 {
+        width: 90%;
+        font-size: 14px;
+        padding: 12px 18px;
+        margin: 5px 0;
+    }
+
+    .delete {
+        width: 80%;
+        right: 10%;
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+    }
+}
